@@ -15,7 +15,7 @@
 - **Vite + React (JavaScript)** 
 - **Material UI (MUI)**
 - **React Query** – Efficient data fetching and caching
-- **ClerkJS** – Authentication and session management
+- **ClerkJS** – Authentication and session management (Secure Login Logout without building it from scratch)
 - **Custom Theme** – Blue & grey palette using `ThemeProvider`
 
 
