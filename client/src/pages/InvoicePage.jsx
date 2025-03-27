@@ -1,9 +1,10 @@
 import {
     Container, Typography, Table, TableBody, TableCell,
     TableContainer, TableHead, TableRow, Paper, Dialog,
-    DialogTitle, DialogContent, CircularProgress
+    DialogTitle, DialogContent, CircularProgress, Box, Button
   } from '@mui/material'
   import { useQuery } from '@tanstack/react-query'
+  import { SignOutButton, UserButton } from '@clerk/clerk-react'
   import { useState } from 'react'
   
   const fetchInvoices = async () => {
@@ -21,10 +22,21 @@ import {
     })
   
     return (
-      <Container>
-        <Typography variant="h4" color="primary" gutterBottom>
-          Invoices
-        </Typography>
+      <Container maxWidth="md">
+        {/* Header with title + user/sign-out */}
+        <Box display="flex" justifyContent="space-between" alignItems="center" mt={4} mb={2}>
+          <Typography variant="h4" color="primary">
+            Invoices
+          </Typography>
+          <Box display="flex" alignItems="center" gap={2}>
+            <UserButton />
+            <SignOutButton>
+              <Button variant="outlined" color="secondary">
+                Sign Out
+              </Button>
+            </SignOutButton>
+          </Box>
+        </Box>
   
         {isLoading && <CircularProgress />}
         {isError && <p>Error: {error.message}</p>}
