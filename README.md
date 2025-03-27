@@ -32,12 +32,15 @@
 
 ---
 
-## ⚠️ Developer Challenges & Solutions
+## Prominent Challenges & Solutions
 
 Prominent Challenges and solutions:
 1- Clerk login showed blank screen | Fixed by setting Clerk's dev host to `http://localhost:5173` and adding custom paths for sign-in |
+
 2- CORS blocked frontend/backend connection | Enabled `app.enableCors()` in NestJS and pointed to `5173` |
+
 3-Git error: `'server/' does not have a commit checked out` | Resolved by removing nested `.git` in `/server` folder |
+
 4- Setting up ClerkJS and setting it to Localhost 5173 instead of localhost 3000
 
 
